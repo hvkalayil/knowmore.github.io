@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" href="favicon.ico" type="image/png">
+
+    <title>Know More</title>
+
+    <!-- BOOTSTRAP IMPORTS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- /BOOTSTRAP IMPORTS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src='script.js'></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Flamenco&display=swap');
+
+        body {
+            font-family: 'Flamenco', cursive;
+            background-color: #e4e4e4;
+        }
+
+        .navbar-brand {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        nav {
+            height: 5rem;
+        }
+
+        .mode {
+            position: absolute;
+            right: 5%;
+            background-color: #343A40;
+        }
+
+        #mode-icon {
+            color: #eceff1;
+        }
+
+        .getURL {
+            z-index: 10;
+            padding: 2rem;
+            border-radius: 25px;
+            background-color: #F8F9FA;
+            display: inline-block;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .goBtn{
+            z-index: 10;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        #submitBtn,
+        #resetBtn {
+            background-color: #eceff1;
+            color: black;
+            position: absolute;
+            left: 50%;
+            bottom: 15%;
+            transform: translateX(-50%);
+        }
+
+        .info {
+            padding: 1rem;
+            border-radius: 25px;
+            background-color: #eceff1;
+            opacity: 0%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 0;
+            color: red;
+        }
+
+        .exitBtn {
+            opacity: 0%;
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .class{
+            text-decoration: underline;
+        }
+        .text{
+            color: #343A40;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar fixed-to navbar-expand-md navbar-light bg-light">
+            <a class="navbar-brand mx-auto" href="#">
+                <i id="logo" class="fa fa-info fa-2x" aria-hidden="true"></i>
+                <span style="font-size:2rem;">Know More</span>
+            </a>
+            <button type="button" class="btn btn-default mode">
+                <i id="mode-icon" class="fa fa-moon-o" aria-hidden="true"></i>
+            </button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="row getURL">
+            <i id="body-logo" class="fa fa-info fa-5x" aria-hidden="true"></i>
+            <p class="lead">
+                <strong class="bold">Know More </strong>
+                about any website.<br />
+                Just enter the URL below
+            </p>
+            <input type="text" class="form-control" id="url" placeholder="https:">
+        </div>
+
+        <div class="row goBtn">
+            <button type="submit" class="btn btn-primary" id="submitBtn">Find Details</button>
+        </div>
+
+        <div class="info">
+                <span class="text">
+                    Domain Name <br>
+                </span>
+                <span class="name"></span><br/>
+
+                <span class="text">
+                    This website was created first on <br>
+                </span>
+                <span class="createdDate"></span><br/>
+
+                <span class="text">
+                    This domain was purchased on <br>
+                </span>
+                <span class="purchaseDate"></span><br/>
+
+                <span class="text">
+                    This domain will be expired on <br>
+                </span>
+                <span class="expiryDate"></span><br/>
+
+                <span class="text">
+                    The registrar who registered this domain was <br>
+                </span>
+                <span class="registrar"></span>
+        </div>
+        <div class="row exitBtn">
+            <button type="submit" class="btn btn-primary" id="resetBtn">Find Another</button>
+        </div>
+    </div>
+
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
